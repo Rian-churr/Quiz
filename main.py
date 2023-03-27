@@ -44,10 +44,16 @@ def next_question():
 
     # Create a button for each answer option
     for option in options:
-        button = tk.Button(root, text=option, width=20, font=("Arial", 12),
+        button = tk.Button(root, text=option, width=10, font=("Arial", 12),
                            command=lambda o=option: check_answer(o))
         answer_buttons.append(button)
-        button.pack(pady=5)
+        button.pack(pady=2)
+
+    # Create a "Next" button to move to the next question
+    next_button = tk.Button(root, text="Next", width=10, font=("Arial", 12),
+                            command=next_question)
+    answer_buttons.append(next_button)
+    next_button.pack(pady=2)
 
 # Define a function to check the selected answer
 def check_answer(answer):
@@ -73,7 +79,7 @@ start_button.pack(pady=20)
 # Set the initial question label and answer buttons
 question_label.config(textvariable=question_var)
 for button in answer_buttons:
-    button.pack(pady=5)
+    button.pack(pady=2)
 
 # Run the main loop
 root.mainloop()
