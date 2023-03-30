@@ -112,6 +112,19 @@ history_button = tk.Button(root, text="Show History", command=show_history, font
 # Pack the history button
 history_button.pack(pady=20)
 
+# Define a function to restart the quiz
+def restart_quiz():
+    global current_question
+    current_question = 0
+    ask_question()
+    restart_button.config(state="active")
+
+# Define the restart button
+restart_button = tk.Button(root, text="Restart", command=restart_quiz, font=("Arial", 12), state="active")
+
+# Pack the restart button
+restart_button.pack(pady=20)
+
 # Ask the first question
 ask_question()
 
