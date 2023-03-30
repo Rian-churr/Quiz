@@ -97,6 +97,21 @@ for radio_button in radio_buttons:
     radio_button.pack(pady=5)
 next_button.pack(pady=20)
 
+# Define a function to show the history
+def show_history():
+    history = ""
+    for i, question in enumerate(questions):
+        history += f"{i+1}. {question['question']} - {question['answer']}\n"
+    history_window = tk.Toplevel(root)
+    history_label = tk.Label(history_window, text=history, font=("Arial", 14))
+    history_label.pack(padx=20, pady=20)
+
+# Define the history button
+history_button = tk.Button(root, text="Show History", command=show_history, font=("Arial", 12))
+
+# Pack the history button
+history_button.pack(pady=20)
+
 # Ask the first question
 ask_question()
 
