@@ -16,6 +16,31 @@ questions = [
         "question": "What is the largest country in the world by land area?",
         "options": ["Russia", "Canada", "China", "USA"],
         "answer": "Russia"
+    },
+    {
+        "question": "What is the currency of Brazil?",
+        "options": ["Dollar", "Real", "Peso", "Euro"],
+        "answer": "Real"
+    },
+    {
+        "question": "What is the highest waterfall in the world?",
+        "options": ["Angel Falls", "Niagara Falls", "Iguazu Falls", "Victoria Falls"],
+        "answer": "Angel Falls"
+    },
+    {
+        "question": "Which country is home to the Great Barrier Reef?",
+        "options": ["Australia", "Thailand", "Mexico", "Brazil"],
+        "answer": "Australia"
+    },
+    {
+        "question": "Which river is the longest in the world?",
+        "options": ["Nile", "Amazon", "Yangtze", "Mississippi"],
+        "answer": "Nile"
+    },
+    {
+        "question": "What is the smallest country in the world?",
+        "options": ["Monaco", "San Marino", "Vatican City", "Liechtenstein"],
+        "answer": "Vatican City"
     }
 ]
 
