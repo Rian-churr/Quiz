@@ -48,6 +48,10 @@ def ask_question():
         radio_buttons[i].config(text=option, value=option)
     next_button.config(state="disabled")
     
+# Define a function to enable the next button
+def enable_next_button(*args):
+    next_button.config(state="normal")
+
 # Define the main window
 root = tk.Tk()
 root.title("World Quiz")
@@ -55,6 +59,7 @@ root.title("World Quiz")
 # Define the widgets
 question_label = tk.Label(root, text="", font=("Arial", 14))
 var = tk.StringVar(value="")
+var.trace("w", enable_next_button)
 radio_buttons = []
 for i in range(4):
     radio_button = tk.Radiobutton(root, text="", variable=var, value="", font=("Arial", 12))
